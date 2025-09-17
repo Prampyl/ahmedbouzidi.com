@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{ .Title }} | {{ .Site.Title }}</title>
+    <link rel="stylesheet" href="{{ "css/custom.css" | relURL }}">
+</head>  
+<body>
+    <nav>{{ partial "navbar.html" . }}</nav>
+    <main>
+        {{ block "main" . }}{{ end }}
+    </main>
+
+    <script>
+        document.getElementById('toggle-navbar').addEventListener('click', function() {
+            const navbar = document.getElementById('navbar');
+            navbar.classList.toggle('active');
+        });
+    </script>
+</body>
+</html>

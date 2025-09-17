@@ -1,0 +1,21 @@
+{{define "main" }}
+<body>
+<div class="homepage">
+    <section class="hero">
+        <h1>Hi/Bonjour/السلام عليكم/你好</h1>
+        <p class="description">{{ .Params.description }}</p>
+    </section>
+    <section class="content">
+        {{ .Content }}
+    </section>
+    <section class="contact">
+        <h2>Get In Touch</h2>
+        <p style="color: black; letter-spacing: 0.05em;">
+            <a href="https://www.linkedin.com/in/ahmed-bouzidi-0288681b5/" style="color: black; margin-right: 20px; text-decoration: none;">Linkedin</a>
+            <a href="https://github.com/prampyl" style="color: black; margin-right: 20px; text-decoration: none;">Github</a>
+            <a href="https://etuville.fr/" style="color: black; text-decoration: none;">My event association</a>
+        </p>
+    </section>
+</div>
+</body>
+{{end}}

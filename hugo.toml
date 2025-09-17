@@ -1,0 +1,4 @@
+baseURL = 'https://ahmedbouzidi.com/'
+languageCode = 'en-us'
+title = 'Ahmed Bouzidi'
+theme = 'ananke'

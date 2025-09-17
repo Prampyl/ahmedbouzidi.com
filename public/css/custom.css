@@ -1,0 +1,132 @@
+/* Background Image */
+body {
+    background-image: url('/images/background.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* Vertical Navbar Styles */
+.vertical-navbar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 250px;
+    height: 100vh;
+    background: transparent;
+    z-index: 1000;
+    padding: 20px;
+}
+
+/* Mobile Toggle Button */
+.toggle-navbar {
+    display: none; /* Hidden on desktop */
+    background: none;
+    border: none;
+    cursor: pointer;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.hamburger-line {
+    width: 25px;
+    height: 3px;
+    background: black;
+    transition: 0.3s;
+}
+
+/* Navigation List */
+.nav-list {
+    list-style: none;
+    padding: 0;
+    margin: 40px 0 0 0;
+}
+
+.nav-item {
+    margin-bottom: 15px;
+}
+
+.nav-item a {
+    color: black;
+    text-decoration: none;
+    font-size: 18px;
+    transition: color 0.3s;
+}
+
+.nav-item a:hover {
+    color: #666;
+}
+
+/* Main Content Area */
+main {
+    margin-left: 250px; /* Push content to the right of navbar */
+    padding: 20px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 768px) {
+    .vertical-navbar {
+        width: 100%;
+        height: auto;
+        position: relative;
+    }
+    
+    .toggle-navbar {
+        display: flex;
+    }
+    
+    .nav-list {
+        display: none; /* Hidden by default on mobile */
+    }
+    
+    .nav-list.active {
+        display: block; /* Show when toggled */
+    }
+    
+    main {
+        margin-left: 0;
+    }
+}
+
+/* Homepage Styles */
+.homepage {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 40px 20px;
+}
+
+.hero {
+    text-align: center;
+    margin-bottom: 60px;
+    padding: 20px 0;
+}
+
+.hero h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.subtitle {
+    font-size: 1.5rem;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.description {
+    font-size: 1.2rem;
+    color: #888;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.content {
+    line-height: 1.6;
+}
+
+.content h2 {
+    color: #333;
+    margin-top: 40px;
+    margin-bottom: 20px;
+}
