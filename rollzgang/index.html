@@ -1,0 +1,111 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="theme-color" content="#060606" />
+    <meta name="robots" content="noindex" />
+    <meta name="description" content="rollzgang — web radio, live every night from paris." />
+    <title>rollzgang</title>
+    <link rel="icon" href="./favicon.svg" type="image/svg+xml" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@700&family=DM+Mono:wght@300;400&family=Instrument+Serif:ital@1&display=swap"
+    />
+    <script type="module" crossorigin src="./assets/index-CrrnVR5J.js"></script>
+    <link rel="stylesheet" crossorigin href="./assets/index-CcKb4e3i.css">
+  </head>
+  <body>
+    <a class="skip-link" href="#now">skip to player</a>
+
+    <div class="stage" id="top">
+      <header class="site-header">
+        <a class="wordmark" href="#top" aria-label="rollzgang, top of page">
+          <span class="wordmark-plain">rollzgang</span>
+          <span class="thermal-bar wordmark-bar" aria-hidden="true">
+            <canvas class="pixel-noise"></canvas>
+            <span class="thermal-text">R O L L Z G A N G</span>
+          </span>
+        </a>
+        <nav class="nav" aria-label="main">
+          <a href="#schedule">schedule</a>
+          <a href="#archive">archive</a>
+          <a href="#about">about</a>
+          <span class="clock"><time id="clock">--:--</time> — <span id="clock-label"></span></span>
+        </nav>
+      </header>
+
+      <main class="main">
+        <!-- Ghost collage (hybrid) / collage composition (full). Decorative. -->
+        <div class="art" aria-hidden="true">
+          <div class="art-main" id="art-main"></div>
+          <div class="art-secondary checkered" id="art-secondary"></div>
+          <canvas class="art-pixels"></canvas>
+        </div>
+
+        <section class="now" id="now" aria-labelledby="title">
+          <div class="now-inner">
+            <p class="on-air" id="on-air">
+              <span class="dot" aria-hidden="true"></span>
+              <span class="on-air-label" id="on-air-label">on air</span>
+            </p>
+            <h1 class="title" id="title">
+              <span class="visually-hidden" id="title-text"></span>
+              <span class="title-layers" id="title-layers" aria-hidden="true"></span>
+            </h1>
+            <p class="meta" id="meta"></p>
+
+            <div class="player">
+              <button type="button" class="listen" id="listen">[ listen ]</button>
+              <div class="progress" aria-hidden="true">
+                <div class="progress-fill" id="progress-fill"></div>
+              </div>
+              <span class="elapsed"><span class="visually-hidden">elapsed </span><span id="elapsed">00:00</span></span>
+              <label class="vol">
+                <span>vol</span>
+                <input type="range" id="volume" min="0" max="1" step="0.05" value="0.8" aria-label="volume" />
+              </label>
+            </div>
+            <p class="player-status" id="player-status" role="status"></p>
+          </div>
+          <p class="visually-hidden" id="announce" aria-live="polite" aria-atomic="true"></p>
+        </section>
+
+        <aside class="side">
+          <figure class="cover">
+            <div class="cover-image" id="cover-image"></div>
+            <figcaption id="cover-caption"></figcaption>
+          </figure>
+
+          <section class="tonight" id="schedule" aria-labelledby="tonight-heading">
+            <h2 class="label" id="tonight-heading">tonight</h2>
+            <ol class="schedule-list" id="schedule-list"></ol>
+          </section>
+        </aside>
+      </main>
+
+      <footer class="status-bar">
+        <span id="stream-info"></span>
+        <span class="status-right">
+          <span id="listeners"></span>
+          <span class="dim" id="established"></span>
+        </span>
+      </footer>
+    </div>
+
+    <section class="page-section" id="archive" aria-labelledby="archive-heading">
+      <h2 class="label" id="archive-heading">archive</h2>
+      <ol class="archive-list" id="archive-list"></ol>
+    </section>
+
+    <section class="page-section" id="about" aria-labelledby="about-heading">
+      <h2 class="label" id="about-heading">about</h2>
+      <div class="about-text" id="about-text"></div>
+    </section>
+
+    <audio id="audio" preload="none"></audio>
+  </body>
+</html>
